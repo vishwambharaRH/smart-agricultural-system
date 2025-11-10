@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agriculture Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Smart Agriculture Control Panel</h1>
+            <div id="connection-status" class="status-badge">Connecting...</div>
+        </header>
+
+        <!-- Real-time Sensor Data -->
+        <section class="sensor-grid">
+            <div class="sensor-card">
+                <h3>🌡️ Temperature</h3>
+                <div class="sensor-value" id="temp-value">--</div>
+                <div class="sensor-unit">°C</div>
+            </div>
+            <div class="sensor-card">
+                <h3>💧 Humidity</h3>
+                <div class="sensor-value" id="hum-value">--</div>
+                <div class="sensor-unit">%</div>
+            </div>
+            <div class="sensor-card">
+                <h3>🌾 Soil Moisture</h3>
+                <div class="sensor-value" id="soil-value">--</div>
+                <div class="sensor-unit">Level</div>
+            </div>
+            <div class="sensor-card">
+                <h3>☀️ Light Level</h3>
+                <div class="sensor-value" id="light-value">--</div>
+                <div class="sensor-unit">Lux</div>
+            </div>
+        </section>
+
+        <!-- Pump Controls -->
+        <section class="control-panel">
+            <h2>💦 Pump Control</h2>
+            <div class="pump-status">
+                <div class="status-indicator" id="pump-indicator"></div>
+                <span id="pump-status-text">OFF</span>
+            </div>
+            <div class="button-group">
+                <button class="btn btn-success" onclick="pumpControl('on')">
+                    Turn ON
+                </button>
+                <button class="btn btn-danger" onclick="pumpControl('off')">
+                    Turn OFF
+                </button>
+                <button class="btn btn-primary" onclick="pumpControl('on', 30)">
+                    ON for 30s
+                </button>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-panel">
+            <h2>📊 Statistics</h2>
+            <div id="stats-content">
+                <p>Loading statistics...</p>
+            </div>
+        </section>
+
+        <!-- Charts -->
+        <section class="charts">
+            <h2>📈 Historical Data</h2>
+            <div class="chart-controls">
+                <label>
+                    Show last:
+                    <select id="data-range" onchange="loadHistory()">
+                        <option value="50">50 records</option>
+                        <option value="100" selected>100 records</option>
+                        <option value="300">300 records</option>
+                        <option value="1000">1000 records</option>
+                    </select>
+                </label>
+            </div>
+            <div class="chart-container">
+                <canvas id="tempChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="soilChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/Charts.js"></script>
+</body>
+</html>
