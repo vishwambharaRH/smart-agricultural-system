@@ -19,7 +19,7 @@
 
 // ===== CONFIGURATION =====
 #define BAUD_RATE 9600     // Serial communication speed
-#define READ_INTERVAL 2000 // Reading interval in milliseconds
+#define READ_INTERVAL 120000 // Reading interval in milliseconds
 #define NUM_SAMPLES 5      // Number of samples for averaging
 
 // ===== SENSOR OBJECTS =====

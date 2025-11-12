@@ -1,7 +1,7 @@
 // Main JavaScript for dashboard functionality
 
 let updateInterval;
-const UPDATE_RATE = 2000; // 2 seconds
+const UPDATE_RATE = 120000; // 2 minutes
 
 // Initialize dashboard
 document.addEventListener('DOMContentLoaded', () => {
