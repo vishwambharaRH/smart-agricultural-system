@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     GPIO_MODE: str = "BCM"  # BCM or BOARD
     
     # Data Logging
-    LOG_INTERVAL: int = 600  # seconds (10 minutes)
+    LOG_INTERVAL: int = 5  # seconds (10 minutes)
     LOG_FILE: str = "data/sensor_log.csv"
     MAX_HISTORY_RECORDS: int = 1000
     
