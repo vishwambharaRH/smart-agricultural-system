@@ -13,13 +13,13 @@
 
 // ===== PIN DEFINITIONS =====
 #define DHTPIN 2           // DHT22 data pin
-#define DHTTYPE DHT22      // DHT sensor type (DHT22 or DHT11)
+#define DHTTYPE DHT11      // DHT sensor type (DHT22 or DHT11)
 #define SOIL_PIN A0        // Soil moisture sensor
 #define LDR_PIN A1         // Light sensor (LDR)
 
 // ===== CONFIGURATION =====
 #define BAUD_RATE 9600     // Serial communication speed
-#define READ_INTERVAL 120000 // Reading interval in milliseconds
+#define READ_INTERVAL 1000// Reading interval in milliseconds
 #define NUM_SAMPLES 5      // Number of samples for averaging
 
 // ===== SENSOR OBJECTS =====
